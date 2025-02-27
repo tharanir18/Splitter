@@ -1,0 +1,350 @@
+/* ExpenseSplitter.css */
+
+/* Main container */
+.expense-splitter {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Typography */
+  .app-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #3b82f6;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .subsection-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  
+  .form-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  
+  /* Sections */
+  .section {
+    margin-bottom: 32px;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+  }
+  
+  /* People section */
+  .people-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .person-tag {
+    display: flex;
+    align-items: center;
+    background-color: #dbeafe;
+    padding: 4px 12px;
+    border-radius: 16px;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .remove-btn:disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  .add-person-form {
+    display: flex;
+  }
+  
+  .add-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Forms */
+  .text-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .text-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  }
+  
+  .select-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+  }
+  
+  .select-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  }
+  
+  /* Expenses table */
+  .expenses-table-container {
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+  
+  .expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .expenses-table th {
+    text-align: left;
+    padding: 8px 16px;
+    background-color: #f3f4f6;
+    font-weight: 500;
+  }
+  
+  .expenses-table td {
+    padding: 8px 16px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .delete-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .no-expenses-message {
+    font-style: italic;
+    color: #6b7280;
+    margin-bottom: 16px;
+  }
+  
+  /* Add expense form */
+  .add-expense-form {
+    background-color: #f3f4f6;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .split-with-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .split-tag {
+    background-color: #e5e7eb;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .split-tag.selected {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .submit-btn {
+    width: 90%;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #059669;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  /* Calculate button */
+  .calculate-section {
+    margin-bottom: 24px;
+  }
+  
+  .calculate-btn {
+    width: 90%;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .calculate-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Results section */
+  .results-section {
+    background-color: #eff6ff;
+  }
+  
+  .balances-container {
+    margin-bottom: 24px;
+  }
+  
+  .balances-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .balance-card {
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid;
+  }
+  
+  .balance-card.positive {
+    background-color: #d1fae5;
+    border-left-color: #10b981;
+  }
+  
+  .balance-card.negative {
+    background-color: #fee2e2;
+    border-left-color: #ef4444;
+  }
+  
+  .balance-card.neutral {
+    background-color: #f3f4f6;
+    border-left-color: #9ca3af;
+  }
+  
+  .person-name {
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .balance-amount {
+    font-size: 14px;
+  }
+  
+  .balance-card.positive .balance-amount {
+    color: #059669;
+  }
+  
+  .balance-card.negative .balance-amount {
+    color: #dc2626;
+  }
+  
+  .balance-card.neutral .balance-amount {
+    color: #6b7280;
+  }
+  
+  /* Settlement plan */
+  .settlement-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .settlement-item {
+    background-color: white;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+  }
+  
+  .debtor {
+    font-weight: 500;
+    color: #dc2626;
+  }
+  
+  .creditor {
+    font-weight: 500;
+    color: #059669;
+  }
+  
+  .amount {
+    font-weight: 700;
+  }
+  
+  .no-settlements-message {
+    font-style: italic;
+    color: #6b7280;
+  }
